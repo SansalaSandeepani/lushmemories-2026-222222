@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Bookings | Lush Memories</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Montserrat', sans-serif; background: #1a1a1a; color: #fff; min-height: 100vh; }
+        .header { background: #0d0d0d; padding: 1.5rem 2rem; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #c9a86c; }
+        .header h1 { color: #c9a86c; font-size: 1.5rem; }
+        .header a { color: #fff; text-decoration: none; padding: 0.5rem 1rem; background: #c9a86c; border-radius: 5px; color: #0d0d0d; }
+        .container { max-width: 1400px; margin: 2rem auto; padding: 0 2rem; }
+        .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin-bottom: 2rem; }
+        .stat-card { background: #2d2d2d; padding: 1.5rem; border-radius: 10px; text-align: center; }
+        .stat-card h3 { font-size: 2rem; color: #c9a86c; }
+        .stat-card p { color: #888; font-size: 0.9rem; margin-top: 0.5rem; }
+        .table-container { background: #2d2d2d; border-radius: 10px; overflow: hidden; }
+        .table-header { padding: 1.5rem; border-bottom: 1px solid #444; display: flex; justify-content: space-between; align-items: center; }
+        .table-header h2 { font-size: 1.2rem; }
+        .refresh-btn { background: #c9a86c; color: #0d0d0d; border: none; padding: 0.6rem 1.2rem; border-radius: 5px; cursor: pointer; font-weight: 600; }
+        table { width: 100%; border-collapse: collapse; }
+        th, td { padding: 1rem; text-align: left; border-bottom: 1px solid #444; }
+        th { background: #1a1a1a; color: #c9a86c; font-weight: 600; font-size: 0.85rem; text-transform: uppercase; }
+        td { font-size: 0.9rem; color: #ddd; }
+        tr:hover { background: #333; }
+        .status { padding: 0.3rem 0.8rem; border-radius: 20px; font-size: 0.75rem; font-weight: 600; }
+        .status.pending { background: #ffc10733; color: #ffc107; }
+        .status.confirmed { background: #28a74533; color: #28a745; }
+        .no-data { text-align: center; padding: 3rem; color: #888; }
+        .delete-btn { background: #dc3545; color: #fff; border: none; padding: 0.4rem 0.8rem; border-radius: 5px; cursor: pointer; }
+        @media (max-width: 768px) { .stats { grid-template-columns: repeat(2, 1fr); } table { font-size: 0.8rem; } th, td { padding: 0.7rem; } }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1><i class="fas fa-camera"></i> Lush Memories - Admin</h1>
+        <a href="index.html"><i class="fas fa-arrow-left"></i> Back to Site</a>
+    </div>
+    
+    <div class="container">
+        <div class="stats">
+            <div class="stat-card">
+                <h3 id="totalBookings">0</h3>
+                <p>Total Bookings</p>
+            </div>
+            <div class="stat-card">
+                <h3 id="pendingBookings">0</h3>
+                <p>Pending</p>
+            </div>
+            <div class="stat-card">
+                <h3 id="weddingBookings">0</h3>
+                <p>Weddings</p>
+            </div>
+            <div class="stat-card">
+                <h3 id="todayBookings">0</h3>
+                <p>Today's Inquiries</p>
+            </div>
+        </div>
+
+        <div class="table-container">
+            <div class="table-header">
+                <h2><i class="fas fa-list"></i> All Bookings</h2>
+                <button class="refresh-btn" onclick="loadBookings()"><i class="fas fa-sync"></i> Refresh</button>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Event Type</th>
+                        <th>Event Date</th>
+                        <th>Package</th>
+                        <th>Status</th>
+                        <th>Created</th>
+                    </tr>
+                </thead>
+                <tbody id="bookingsTable">
+                    <tr><td colspan="9" class="no-data">Loading...</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        async function loadBookings() {
+            try {
+                const response = await fetch('/api/bookings');
+                const data = await response.json();
+                
+                if (data.success) {
+                    const bookings = data.bookings;
+                    const tbody = document.getElementById('bookingsTable');
+                    
+                    // Update stats
+                    document.getElementById('totalBookings').textContent = bookings.length;
+                    document.getElementById('pendingBookings').textContent = bookings.filter(b => b.status === 'pending').length;
+                    document.getElementById('weddingBookings').textContent = bookings.filter(b => b.eventType === 'wedding').length;
+                    
+                    const today = new Date().toISOString().split('T')[0];
+                    document.getElementById('todayBookings').textContent = bookings.filter(b => b.createdAt && b.createdAt.startsWith(today)).length;
+                    
+                    if (bookings.length === 0) {
+                        tbody.innerHTML = '<tr><td colspan="9" class="no-data">No bookings yet</td></tr>';
+                        return;
+                    }
+                    
+                    tbody.innerHTML = bookings.map(b => `
+                        <tr>
+                            <td>#${b.id}</td>
+                            <td>${b.firstName} ${b.lastName}</td>
+                            <td>${b.email}</td>
+                            <td>${b.phone}</td>
+                            <td>${b.eventType}</td>
+                            <td>${b.eventDate}</td>
+                            <td>${b.package || '-'}</td>
+                            <td><span class="status ${b.status}">${b.status}</span></td>
+                            <td>${new Date(b.createdAt).toLocaleDateString()}</td>
+                        </tr>
+                    `).join('');
+                }
+            } catch (error) {
+                document.getElementById('bookingsTable').innerHTML = '<tr><td colspan="9" class="no-data">Error loading bookings. Make sure server is running.</td></tr>';
+            }
+        }
+        
+        loadBookings();
+    </script>
+</body>
+</html>
+
