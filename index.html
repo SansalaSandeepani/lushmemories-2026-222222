@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lush Memories | Capturing Your Precious Moments</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="loader">
+            <span class="loader-text">Lush Memories</span>
+            <div class="loader-bar"></div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">
+                <span class="logo-icon">✦</span>
+                <span class="logo-text">Lush Memories</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#packages">Packages</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="#contact" class="btn-book">Book Now</a>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <ul class="mobile-nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#packages">Packages</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-bg">
+            <div class="hero-overlay"></div>
+            <div class="floating-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+            </div>
+        </div>
+        <div class="hero-content">
+            <span class="hero-tag" data-aos="fade-up">Photography & Videography</span>
+            <h1 class="hero-title" data-aos="fade-up" data-aos-delay="100">
+                <span class="title-line">Capturing</span>
+                <span class="title-line highlight">Timeless</span>
+                <span class="title-line">Moments</span>
+            </h1>
+            <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="200">
+                We transform your precious moments into eternal memories through the art of photography and cinematic videography
+            </p>
+            <div class="hero-buttons" data-aos="fade-up" data-aos-delay="300">
+                <a href="#portfolio" class="btn btn-primary">View Portfolio</a>
+                <a href="#packages" class="btn btn-secondary">Our Packages</a>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <span>Scroll to explore</span>
+            <div class="scroll-indicator"></div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-number" data-count="500">0</span>
+                    <span class="stat-plus">+</span>
+                    <span class="stat-label">Weddings Captured</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-count="1200">0</span>
+                    <span class="stat-plus">+</span>
+                    <span class="stat-label">Happy Clients</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-count="8">0</span>
+                    <span class="stat-plus">+</span>
+                    <span class="stat-label">Years Experience</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-count="50">0</span>
+                    <span class="stat-plus">+</span>
+                    <span class="stat-label">Awards Won</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Our Work</span>
+                <h2 class="section-title">Portfolio Gallery</h2>
+                <p class="section-subtitle">Browse through our collection of captured memories</p>
+            </div>
+            
+            <!-- Portfolio Filter -->
+            <div class="portfolio-filter">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="wedding">Weddings</button>
+                <button class="filter-btn" data-filter="engagement">Engagement</button>
+                <button class="filter-btn" data-filter="portrait">Portraits</button>
+                <button class="filter-btn" data-filter="event">Events</button>
+                <button class="filter-btn" data-filter="prewedding">Pre-Wedding</button>
+                <button class="filter-btn" data-filter="birthday">Birthday</button>
+            </div>
+
+            <!-- Portfolio Grid -->
+            <div class="portfolio-grid">
+                <!-- Wedding Photos -->
+                <div class="portfolio-item" data-category="wedding">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=800" alt="Wedding Photography">
+                        <div class="portfolio-overlay">
+                            <span class="portfolio-category">Wedding</span>
+                            <h3>Sarah & John</h3>
+                            <p>Beach Wedding Ceremony</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item large" data-category="wedding">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1606216794074-735e91aa2c92?w=800" alt="Wedding Photography">
+                        <div class="portfolio-overlay">
+                            <span class="portfolio-category">Wedding</span>
+                            <h3>Emily & Michael</h3>
+                            <p>Garden Wedding</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="wedding">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=800" alt="Wedding Photography">
+                        <div class="portfolio-overlay">
+                            <span class="portfolio-category">Wedding</span>
+                            <h3>Lisa & David</h3>
+                            <p>Church Wedding</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Engagement Photos -->
+                <div class="portfolio-item" data-category="engagement">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=800" alt="Engagement Photography">
+                        <div class="portfolio-overlay">
+                            <span class="portfolio-category">Engagement</span>
+                            <h3>Anna & Chris</h3>
+                            <p>Sunset Engagement</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="engagement">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1591604466107-ec97de577aff?w=800" alt="Engagement Photography">
+                        <div class="portfolio-overlay">
+                            <span class="portfolio-category">Engagement</span>
+                            <h3>Rachel & Tom</h3>
+                            <p>City Engagement</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Portrait Photos -->
+                <div class="portfolio-item large" data-category="portrait">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=800" alt="Portrait Photography">
+                        <div class="portfolio-overlay">
+                            <span class="portfolio-category">Portrait</span>
+                            <h3>Fashion Portrait</h3>
+                            <p>Studio Session</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="portrait">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=800" alt="Portrait Photography">
+                        <div class="portfolio-overlay">
+                            <span class="portfolio-category">Portrait</span>
+                            <h3>Natural Beauty</h3>
+                            <p>Outdoor Portrait</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Event Photos -->
+                <div class="portfolio-item" data-category="event">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800" alt="Event Photography">
+                        <div class="portfolio-overlay">
+                            <span class="portfolio-category">Event</span>
+                            <h3>Corporate Gala</h3>
+                            <p>Annual Awards Night</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="event">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=800" alt="Event Photography">
+                        <div class="portfolio-overlay">
+                            <span class="portfolio-category">Event</span>
+                            <h3>Music Festival</h3>
+                            <p>Live Concert Coverage</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Pre-Wedding Photos -->
+                <div class="portfolio-item large" data-category="prewedding">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1529634806980-85c3dd6d34ac?w=800" alt="Pre-Wedding Photography">
+                        <div class="portfolio-overlay">
+                            <span class="portfolio-category">Pre-Wedding</span>
+                            <h3>Romantic Getaway</h3>
+                            <p>Mountain Pre-Wedding</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="prewedding">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1544078751-58fee2d8a03b?w=800" alt="Pre-Wedding Photography">
+                        <div class="portfolio-overlay">
+                            <span class="portfolio-category">Pre-Wedding</span>
+                            <h3>Beach Romance</h3>
+                            <p>Coastal Pre-Wedding</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Birthday Photos -->
+                <div class="portfolio-item" data-category="birthday">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=800" alt="Birthday Photography">
+                        <div class="portfolio-overlay">
+                            <span class="portfolio-category">Birthday</span>
+                            <h3>Sweet 16</h3>
+                            <p>Birthday Celebration</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="birthday">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1464349153735-7db50ed83c84?w=800" alt="Birthday Photography">
+                        <div class="portfolio-overlay">
+                            <span class="portfolio-category">Birthday</span>
+                            <h3>Kids Party</h3>
+                            <p>Fun Birthday Bash</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- More Wedding Photos -->
+                <div class="portfolio-item" data-category="wedding">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?w=800" alt="Wedding Photography">
+                        <div class="portfolio-overlay">
+                            <span class="portfolio-category">Wedding</span>
+                            <h3>Traditional Wedding</h3>
+                            <p>Cultural Ceremony</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item large" data-category="wedding">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=800" alt="Wedding Photography">
+                        <div class="portfolio-overlay">
+                            <span class="portfolio-category">Wedding</span>
+                            <h3>Romantic Moments</h3>
+                            <p>First Dance</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="portfolio-cta">
+                <a href="#contact" class="btn btn-primary">View Full Gallery</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">What We Offer</span>
+                <h2 class="section-title">Our Services</h2>
+                <p class="section-subtitle">Professional photography and videography for all occasions</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                    <h3>Photography</h3>
+                    <p>High-quality professional photography capturing every precious moment with artistic precision</p>
+                    <ul class="service-features">
+                        <li>Wedding Photography</li>
+                        <li>Portrait Sessions</li>
+                        <li>Event Coverage</li>
+                        <li>Product Photography</li>
+                    </ul>
+                </div>
+                <div class="service-card featured">
+                    <div class="service-badge">Most Popular</div>
+                    <div class="service-icon">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h3>Videography</h3>
+                    <p>Cinematic video production that tells your story with emotion and elegance</p>
+                    <ul class="service-features">
+                        <li>Wedding Films</li>
+                        <li>Documentary Style</li>
+                        <li>Highlight Reels</li>
+                        <li>Drone Footage</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-magic"></i>
+                    </div>
+                    <h3>Photo + Video</h3>
+                    <p>Complete coverage combining both photography and videography for the ultimate experience</p>
+                    <ul class="service-features">
+                        <li>Full Day Coverage</li>
+                        <li>Multiple Photographers</li>
+                        <li>Same Day Edits</li>
+                        <li>Online Gallery</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Packages Section -->
+    <section id="packages" class="packages-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Pricing</span>
+                <h2 class="section-title">Wedding Packages</h2>
+                <p class="section-subtitle">Choose the perfect package for your special day</p>
+            </div>
+            
+            <div class="packages-grid">
+                <!-- Silver Package -->
+                <div class="package-card">
+                    <div class="package-header">
+                        <span class="package-name">Silver</span>
+                        <div class="package-price">
+                            <span class="currency">$</span>
+                            <span class="amount">1,499</span>
+                        </div>
+                        <span class="package-duration">Starting Package</span>
+                    </div>
+                    <div class="package-content">
+                        <ul class="package-features">
+                            <li><i class="fas fa-check"></i> 6 Hours Coverage</li>
+                            <li><i class="fas fa-check"></i> 1 Professional Photographer</li>
+                            <li><i class="fas fa-check"></i> 300+ Edited Photos</li>
+                            <li><i class="fas fa-check"></i> Online Gallery</li>
+                            <li><i class="fas fa-check"></i> High Resolution Images</li>
+                            <li><i class="fas fa-check"></i> USB Drive Delivery</li>
+                            <li class="not-included"><i class="fas fa-times"></i> Videography</li>
+                            <li class="not-included"><i class="fas fa-times"></i> Drone Coverage</li>
+                            <li class="not-included"><i class="fas fa-times"></i> Photo Album</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-outline">Choose Package</a>
+                    </div>
+                </div>
+
+                <!-- Gold Package -->
+                <div class="package-card featured">
+                    <div class="package-badge">Most Popular</div>
+                    <div class="package-header">
+                        <span class="package-name">Gold</span>
+                        <div class="package-price">
+                            <span class="currency">$</span>
+                            <span class="amount">2,999</span>
+                        </div>
+                        <span class="package-duration">Best Value</span>
+                    </div>
+                    <div class="package-content">
+                        <ul class="package-features">
+                            <li><i class="fas fa-check"></i> Full Day Coverage (10 Hours)</li>
+                            <li><i class="fas fa-check"></i> 2 Professional Photographers</li>
+                            <li><i class="fas fa-check"></i> 1 Videographer</li>
+                            <li><i class="fas fa-check"></i> 500+ Edited Photos</li>
+                            <li><i class="fas fa-check"></i> 5-7 Min Highlight Video</li>
+                            <li><i class="fas fa-check"></i> Full Ceremony Video</li>
+                            <li><i class="fas fa-check"></i> Online Gallery</li>
+                            <li><i class="fas fa-check"></i> Premium Photo Album</li>
+                            <li class="not-included"><i class="fas fa-times"></i> Drone Coverage</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-primary">Choose Package</a>
+                    </div>
+                </div>
+
+                <!-- Platinum Package -->
+                <div class="package-card premium">
+                    <div class="package-badge premium-badge">Premium</div>
+                    <div class="package-header">
+                        <span class="package-name">Platinum</span>
+                        <div class="package-price">
+                            <span class="currency">$</span>
+                            <span class="amount">4,999</span>
+                        </div>
+                        <span class="package-duration">Complete Experience</span>
+                    </div>
+                    <div class="package-content">
+                        <ul class="package-features">
+                            <li><i class="fas fa-check"></i> Unlimited Coverage</li>
+                            <li><i class="fas fa-check"></i> 3 Professional Photographers</li>
+                            <li><i class="fas fa-check"></i> 2 Videographers</li>
+                            <li><i class="fas fa-check"></i> 800+ Edited Photos</li>
+                            <li><i class="fas fa-check"></i> Cinematic Wedding Film</li>
+                            <li><i class="fas fa-check"></i> Drone Aerial Coverage</li>
+                            <li><i class="fas fa-check"></i> Same Day Edit Video</li>
+                            <li><i class="fas fa-check"></i> Luxury Photo Album</li>
+                            <li><i class="fas fa-check"></i> Engagement Session Included</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-gold">Choose Package</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Additional Services -->
+            <div class="additional-services">
+                <h3>Add-On Services</h3>
+                <div class="addons-grid">
+                    <div class="addon-item">
+                        <i class="fas fa-plane"></i>
+                        <span>Drone Coverage</span>
+                        <span class="addon-price">+$350</span>
+                    </div>
+                    <div class="addon-item">
+                        <i class="fas fa-book-open"></i>
+                        <span>Extra Photo Album</span>
+                        <span class="addon-price">+$250</span>
+                    </div>
+                    <div class="addon-item">
+                        <i class="fas fa-clock"></i>
+                        <span>Extra Hour</span>
+                        <span class="addon-price">+$150</span>
+                    </div>
+                    <div class="addon-item">
+                        <i class="fas fa-user-plus"></i>
+                        <span>Additional Photographer</span>
+                        <span class="addon-price">+$400</span>
+                    </div>
+                    <div class="addon-item">
+                        <i class="fas fa-film"></i>
+                        <span>Same Day Edit</span>
+                        <span class="addon-price">+$500</span>
+                    </div>
+                    <div class="addon-item">
+                        <i class="fas fa-heart"></i>
+                        <span>Engagement Session</span>
+                        <span class="addon-price">+$300</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-images">
+                    <div class="about-img-1">
+                        <img src="https://images.unsplash.com/photo-1554048612-b6a482bc67e5?w=600" alt="Photographer at work">
+                    </div>
+                    <div class="about-img-2">
+                        <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=600" alt="Camera equipment">
+                    </div>
+                    <div class="experience-badge">
+                        <span class="exp-number">8+</span>
+                        <span class="exp-text">Years of Excellence</span>
+                    </div>
+                </div>
+                <div class="about-content">
+                    <span class="section-tag">About Us</span>
+                    <h2 class="section-title">Passionate About Capturing Your Story</h2>
+                    <p class="about-text">
+                        At Lush Memories, we believe every moment tells a story worth preserving. Our team of passionate photographers and videographers are dedicated to capturing the authentic emotions and beautiful details of your special occasions.
+                    </p>
+                    <p class="about-text">
+                        With over 8 years of experience in wedding and event photography, we've had the privilege of documenting hundreds of love stories. Our artistic approach combines traditional elegance with modern creativity, ensuring your memories are captured in the most stunning way possible.
+                    </p>
+                    <div class="about-features">
+                        <div class="about-feature">
+                            <i class="fas fa-award"></i>
+                            <span>Award Winning Team</span>
+                        </div>
+                        <div class="about-feature">
+                            <i class="fas fa-heart"></i>
+                            <span>Passionate Artists</span>
+                        </div>
+                        <div class="about-feature">
+                            <i class="fas fa-gem"></i>
+                            <span>Premium Quality</span>
+                        </div>
+                    </div>
+                    <a href="#contact" class="btn btn-primary">Get In Touch</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Testimonials</span>
+                <h2 class="section-title">What Our Clients Say</h2>
+            </div>
+            <div class="testimonials-slider">
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Lush Memories captured our wedding day perfectly! Every photo tells a story and brings back all the emotions from that special day. Highly recommend!"</p>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100" alt="Client">
+                        <div>
+                            <h4>Sarah Johnson</h4>
+                            <span>Wedding Client</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"The team was incredibly professional and made us feel so comfortable. Our wedding video is like a movie - we watch it over and over again!"</p>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100" alt="Client">
+                        <div>
+                            <h4>Michael & Emily</h4>
+                            <span>Wedding Client</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Best investment we made for our wedding! The photos and video exceeded all our expectations. True artists who capture real moments."</p>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100" alt="Client">
+                        <div>
+                            <h4>Amanda Williams</h4>
+                            <span>Wedding Client</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Get In Touch</span>
+                <h2 class="section-title">Let's Create Magic Together</h2>
+                <p class="section-subtitle">Ready to capture your precious moments? Contact us today!</p>
+            </div>
+            
+            <div class="contact-grid">
+                <!-- Contact Info -->
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Phone</h3>
+                            <a href="tel:+1234567890">+1 (234) 567-890</a>
+                            <a href="tel:+1234567891">+1 (234) 567-891</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon whatsapp">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>WhatsApp</h3>
+                            <a href="https://wa.me/1234567890" target="_blank">+1 (234) 567-890</a>
+                            <span class="availability">Available 24/7</span>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon email">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Email</h3>
+                            <a href="mailto:hello@lushmemories.com">hello@lushmemories.com</a>
+                            <a href="mailto:bookings@lushmemories.com">bookings@lushmemories.com</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon location">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Location</h3>
+                            <p>123 Photography Lane<br>Creative District, City 12345</p>
+                            <a href="https://maps.google.com" target="_blank" class="directions-link">Get Directions <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-pinterest-p"></i></a>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contact-form-container">
+                    <form class="contact-form" id="contactForm">
+                        <h3>Book Your Session</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">First Name *</label>
+                                <input type="text" id="firstName" name="firstName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name *</label>
+                                <input type="text" id="lastName" name="lastName" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone *</label>
+                                <input type="tel" id="phone" name="phone" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="eventType">Event Type *</label>
+                            <select id="eventType" name="eventType" required>
+                                <option value="">Select Event Type</option>
+                                <option value="wedding">Wedding</option>
+                                <option value="engagement">Engagement</option>
+                                <option value="prewedding">Pre-Wedding Shoot</option>
+                                <option value="birthday">Birthday Party</option>
+                                <option value="corporate">Corporate Event</option>
+                                <option value="portrait">Portrait Session</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="eventDate">Event Date *</label>
+                                <input type="date" id="eventDate" name="eventDate" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="package">Preferred Package</label>
+                                <select id="package" name="package">
+                                    <option value="">Select Package</option>
+                                    <option value="silver">Silver - $1,499</option>
+                                    <option value="gold">Gold - $2,999</option>
+                                    <option value="platinum">Platinum - $4,999</option>
+                                    <option value="custom">Custom Package</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Tell Us About Your Event</label>
+                            <textarea id="message" name="message" rows="4" placeholder="Share details about your event, venue, special requests..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-submit">
+                            <span>Send Inquiry</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Map -->
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.215256018842!2d-73.98784492404069!3d40.75797833440232!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25855c6480299%3A0x55194ec5a1ae072e!2sTimes%20Square!5e0!3m2!1sen!2sus!4v1702000000000!5m2!1sen!2sus" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#home" class="footer-logo">
+                        <span class="logo-icon">✦</span>
+                        <span class="logo-text">Lush Memories</span>
+                    </a>
+                    <p>Capturing your precious moments and transforming them into timeless memories that last forever.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#packages">Packages</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#">Wedding Photography</a></li>
+                        <li><a href="#">Wedding Videography</a></li>
+                        <li><a href="#">Pre-Wedding Shoots</a></li>
+                        <li><a href="#">Event Coverage</a></li>
+                        <li><a href="#">Portrait Sessions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li><i class="fas fa-phone-alt"></i> +1 (234) 567-890</li>
+                        <li><i class="fab fa-whatsapp"></i> +1 (234) 567-890</li>
+                        <li><i class="fas fa-envelope"></i> hello@lushmemories.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Photography Lane, City</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Lush Memories. All Rights Reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/1234567890" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+        <span class="whatsapp-tooltip">Chat with us!</span>
+    </a>
+
+    <!-- Back to Top -->
+    <a href="#home" class="back-to-top">
+        <i class="fas fa-chevron-up"></i>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
